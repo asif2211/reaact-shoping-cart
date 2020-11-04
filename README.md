@@ -81,6 +81,11 @@ react-icons installed
 redux installed
 ### `Animation`
 react-reveal installed.
+### `nodemon`
+npm install nodemon installed.
+### `postman`
+npm install nodemon installed.
+
 
 
 

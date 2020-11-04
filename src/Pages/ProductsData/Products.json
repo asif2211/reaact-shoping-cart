@@ -1,0 +1,66 @@
+ 
+ {
+    "products": [
+      {
+        "id": "dress1",
+        "title": "Midi dress in pink ditsy floral",
+        "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+        "image": "/images/dress1.jpg",
+        "availableSize": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+         
+        }
+,
+{
+    "id": "dress2",
+    "title": "Frill mini dress in yellow polka dot",
+    "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+    "image": "/images/dress2.jpg",
+    "availableSize": ["X", "M", "L"],
+    "price": 18.9
+     
+    }
+,
+{
+    "id": "dress3",
+    "title": "Midi sundress with shirring detail",
+    "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+    "image": "/images/dress3.jpg",
+    "availableSize": ["X", "M", "L"],
+    "price": 14.9
+     
+    }
+,
+{
+    "id": "dress4",
+    "title": "Midi tea dress in blue and red spot",
+    "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+    "image": "/images/dress4.jpg",
+    "availableSize": ["XL"],
+    "price": 25.9
+     
+    }
+,
+{
+    "id": "dress5",
+    "title": "Midi sundress with ruched front",
+    "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+    "image": "/images/dress5.jpg",
+    "availableSize": ["X", "L", "XL"],
+    "price":10.9
+     
+    }
+,
+{
+    "id": "dress6",
+    "title": "cami maxi dress in polka dot",
+    "description": "It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.",
+    "image": "/images/dress6.jpg",
+    "availableSize": ["XL", "XXL"],
+    "price": 49.9
+     
+    }
+
+
+    ]
+  }

@@ -11,7 +11,11 @@ import {
 import ProductList from "./ProductList.js";
 import Filter from "../Filter/Filter.js";
 import Cart from "../Cart.js/Cart.js";
-export default class Products extends Component {
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { requestHelloWorld } from "../../action";
+
+class Products extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,7 +25,9 @@ export default class Products extends Component {
       cartItems :localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')):[]
     };
   }
-
+  componentDidMount(){
+    this.props.requestHelloWorld();
+  }
   handlesortProduct = (event) => {
      const sort =  event.target.value 
       this.setState((state)=>({
@@ -100,14 +106,22 @@ export default class Products extends Component {
     }
     
   } 
+  
+
+
   render() {
+    
     return (
       <GridContainer>
         <Main>
           <Content>
+          <div>
+          
+          </div>
             <SubMain>
-            
+            {this.props.helloWorld}
               <Filter
+              
                 count={this.state.product.length}
                 sort={this.props.sort}
                 size={this.props.size}
@@ -117,6 +131,7 @@ export default class Products extends Component {
               <ProductList products={this.state.product} addToCart={this.addToCart} />
             </SubMain>
             <Sidebar><Cart cartItems={this.state.cartItems} removeCart={this.removeCart} createOrder={this.createOrder}/></Sidebar>
+          
           </Content>
         </Main>
         <Footer>footer</Footer>
@@ -124,3 +139,9 @@ export default class Products extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({ helloWorld: state.helloWorld });
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ requestHelloWorld }, dispatch);
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

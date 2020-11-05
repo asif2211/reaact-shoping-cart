@@ -115,9 +115,7 @@ class Products extends Component {
       <GridContainer>
         <Main>
           <Content>
-          <div>
           
-          </div>
             <SubMain>
             {this.props.helloWorld}
               <Filter

@@ -13,7 +13,7 @@ import Filter from "../Filter/Filter.js";
 import Cart from "../Cart.js/Cart.js";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { requestApiData } from "../../action";
+import { requestHelloWorld } from "../../action";
 
 class Products extends Component {
   constructor() {
@@ -26,7 +26,7 @@ class Products extends Component {
     };
   }
   componentDidMount(){
-    this.props.requestApiData();
+    this.props.requestHelloWorld();
   }
   handlesortProduct = (event) => {
      const sort =  event.target.value 
@@ -106,9 +106,11 @@ class Products extends Component {
     }
     
   } 
+  
+
 
   render() {
-    console.log(this.props.apiData.main.temp)
+    console.log(this.props.ApiData)
     return (
       <GridContainer>
         <Main>
@@ -117,14 +119,14 @@ class Products extends Component {
             <SubMain>
             
               <Filter
-                
+              
                 count={this.state.product.length}
                 sort={this.props.sort}
                 size={this.props.size}
                 handlesortProduct={this.handlesortProduct}
                 handlesizeProduct={this.handlesizeProduct}
               />
-              <ProductList products={this.state.product} addToCart={this.addToCart}/>
+              <ProductList products={this.state.product} addToCart={this.addToCart} />
             </SubMain>
             <Sidebar><Cart cartItems={this.state.cartItems} removeCart={this.removeCart} createOrder={this.createOrder}/></Sidebar>
           
@@ -136,8 +138,8 @@ class Products extends Component {
   }
 }
 
-const mapStateToProps = state => ({ apiData: state.data });
+const mapStateToProps = state => ({ ApiData: state.helloWorld });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ requestApiData }, dispatch);
+  bindActionCreators({ requestHelloWorld }, dispatch);
 export default connect(mapStateToProps, mapDispatchToProps)(Products);

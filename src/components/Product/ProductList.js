@@ -35,14 +35,19 @@ export default class ProductList extends Component {
     this.setState({ product: null });
   };
   render() {
+    console.log(this.props.apiData);
     const { product } = this.state;
+    
     return (
       <div>
         <Fade bottom cascade>
           <Ul>
-            {this.props.products.map((product) => (
-              <Li key={product.id}>
-                <ProductBox>
+            
+            {
+              
+            this.props.products.map((product) => (
+              <Li key={product.id} >
+                <ProductBox >
                   <Linkstyle onClick={() => this.OpenModal(product)}>
                     <Images src={product.image} alt={product.title} />
                     <p>{product.title}</p>
@@ -55,7 +60,8 @@ export default class ProductList extends Component {
                   </PriceMain>
                 </ProductBox>
               </Li>
-            ))}
+              
+            ))}  
           </Ul>
         </Fade>
         {product && (

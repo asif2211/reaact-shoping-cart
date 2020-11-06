@@ -23,7 +23,7 @@ const Navbar = () => {
           <NavLink to='/Resume' >
             
           </NavLink>
-          <NavLink to='/About' >
+          <NavLink to='/WeatherData' >
             About Me
           </NavLink>
           <NavLink to='/Projects' >

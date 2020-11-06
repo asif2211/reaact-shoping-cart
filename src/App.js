@@ -5,6 +5,7 @@ import Products from './components/Product/Products'
 import Navbar from "./Navbar/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";
+import WeatherData from "./Pages/weather/WeatherData";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         
         <Switch>
         <Route path="/" exact component={Products} />
+        <Route path="/WeatherData" component={WeatherData} />
           {/* <Route path="/About" component={About} />
           <Route path="/Projects" component={Projects} />
           <Route path="/Contacts" component={Contacts} />

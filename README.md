@@ -85,6 +85,11 @@ react-reveal installed.
 npm install nodemon installed.
 ### `postman`
 npm install nodemon installed.
+### `Redux sagas`
+Redux sagas installed.
+### `weather icon `
+weather icon installed.
+
 
 
 

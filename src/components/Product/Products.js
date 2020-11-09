@@ -11,11 +11,8 @@ import {
 import ProductList from "./ProductList.js";
 import Filter from "../Filter/Filter.js";
 import Cart from "../Cart.js/Cart.js";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { requestApiData } from "../../action";
 
-class Products extends Component {
+export default class Products extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,9 +22,7 @@ class Products extends Component {
       cartItems :localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')):[]
     };
   }
-  componentDidMount(){
-    this.props.requestApiData();
-  }
+  
   handlesortProduct = (event) => {
      const sort =  event.target.value 
       this.setState((state)=>({
@@ -108,7 +103,7 @@ class Products extends Component {
   } 
 
   render() {
-    console.log(this.props.apiData.main.temp)
+    
     return (
       <GridContainer>
         <Main>
@@ -136,8 +131,4 @@ class Products extends Component {
   }
 }
 
-const mapStateToProps = state => ({ apiData: state.data });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ requestApiData }, dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(Products);

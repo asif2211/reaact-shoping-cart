@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin:0 auto;
-  display: flex;
-  padding: 1.3rem;
-  margin: 1rem;
-  font-size:1.2rem;
-  color:#54565A;
+
+display: flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background: url(images/background.png) no-repeat;
+background-size: 750px 417px;
+width: 100%;
+height: 417px;
+  
 `;
 export const Weather = styled.div`
    max-height:100vh;
@@ -19,7 +23,10 @@ export const ApiData = styled.div`
     display:flex;
    flex-direction:row;
    justify-content:space-between;
+   align-items:center;
    width:20rem;
+   
+   
 `
 export const Icon = styled.div`
     display:flex;
@@ -27,6 +34,30 @@ export const Icon = styled.div`
    font-size:4rem;
    justify-content:center;
    width:20rem;
-
+   position:relative;
 `
+export const Form = styled.div`
+   display:flex;
+   flex-direction:row;
+   justify-content:space-between;
+   width:25rem;
+   
+`
+export const Input = styled.input`
+  border-width: 0 0 2px;
+  border-color: #c0c0c0;
+  outline:0;
+  padding:.3rem;
+  
+`
+export const Temp = styled.div`
+   display:flex;
+   flex-direction:row;
+   
+   text-align:center;
+   justify-content:space-around;
+   width:20rem;
+   position:relative;
 
+   
+`

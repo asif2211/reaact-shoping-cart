@@ -4,9 +4,12 @@ import { connect } from "react-redux";
 import { requestApiData } from "../../action";
 import "weather-icons/css/weather-icons.css";
 import { Container, Weather, ApiData, Icon, Form, Input,Temp } from "./style";
+import { REQUEST_API_DATA } from "../../action";
+
 class WeatherData extends Component {
   constructor() {
     super();
+    this.state = {city: 'Bahawalpur, PK'}
     this.weatherIcon = {
         Thunderstorm : 'wi-thunderstorm',
         Drizzle : 'wi-sleet',
@@ -17,17 +20,23 @@ class WeatherData extends Component {
         Clouds : 'wi-day-fog',
         
     }
+
+    this.handleCityChange = this.handleCityChange.bind(this);
   }
 
-  componentDidMount() {
-    this.props.requestApiData();
+ async componentDidMount() {
+   await this.props.requestApiData(
+      {type: REQUEST_API_DATA, payload: {city: this.state.city}}
+    );
   }
+
   minmaxTemp = (min, max) => (
     <Temp>
       <h3>{min}&deg;</h3>
       <h3>{max}&deg;</h3>
     </Temp>
   );
+
   celcTemp = (cell)=>{
    
     return Math.floor(cell-273.5)
@@ -52,7 +61,20 @@ class WeatherData extends Component {
             return null
     }
     
-}
+  }
+
+  handleCityChange(event) {
+    const inputCity = event.target.value;
+    this.setState({'city': inputCity});
+  }
+
+  async handleCitySubmit(event) {
+    event.preventDefault();
+    await this.props.requestApiData(
+      {type: REQUEST_API_DATA, payload: {city: this.state.city}}
+    );
+  }
+
   render() {
     console.log(this.props.apiData);
 
@@ -61,9 +83,11 @@ class WeatherData extends Component {
         <Container>
           <Weather>
             <Form>
-              <Input />
-              <Input />
-              <button>Submit</button>
+              <Input 
+                    placeholder="Enter City" 
+                    value={this.state.city}
+                    onChange={(e) => this.handleCityChange(e)} />
+              <button onClick={(e) => this.handleCitySubmit(e)}>Submit</button>
             </Form>
 
             <ApiData>
@@ -73,7 +97,7 @@ class WeatherData extends Component {
               </h3>
             </ApiData>
             <Icon>
-              <i class={`wi ${this.changeWeatherIcon(this.props.apiData.sys && this.props.apiData.weather[0]['id'])}`}></i>
+              <i className={`wi ${this.changeWeatherIcon(this.props.apiData.sys && this.props.apiData.weather[0]['id'])}`}></i>
             </Icon>
             <Temp>
                 <h3>{this.celcTemp(this.props.apiData.main&&this.props.apiData.main['temp'])}&deg;</h3>
@@ -95,7 +119,7 @@ class WeatherData extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ apiData: state.data });
+const mapStateToProps = (state) => ({ apiData: state.data.data });
 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({ requestApiData }, dispatch);

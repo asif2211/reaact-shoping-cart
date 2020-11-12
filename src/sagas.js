@@ -7,9 +7,9 @@ import { fetchData } from "./api";
 function* getApiData(action) {
   try {
     // do api call
-    const data = yield call(fetchData);
+    const data = yield call(fetchData, action.data.payload.city);
     
-    yield put(receiveApiData(data));
+    yield put(receiveApiData({type: "RECEIVE_API_DATA", data: data}));
   } catch (e) {
     console.log(e);
   }
@@ -22,5 +22,5 @@ function* getApiData(action) {
   and only the latest one will be run.
 */
 export default function* mySaga() {
-  yield takeLatest(REQUEST_API_DATA, getApiData);
+  yield takeEvery(REQUEST_API_DATA, getApiData);
 }

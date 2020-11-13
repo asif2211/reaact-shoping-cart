@@ -26,8 +26,8 @@ const Navbar = () => {
           <NavLink to='/WeatherData' >
             About Me
           </NavLink>
-          <NavLink to='/Projects' >
-            Projects
+          <NavLink to='/AxiosApi' >
+            Api
           </NavLink>
           <NavLink to='/Contacts' >
             Contacts

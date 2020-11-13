@@ -6,7 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";
 import WeatherData from "./Pages/weather/WeatherData";
-
+import AxiosApi from './Pages/Apidata/AxiosApi'
 function App() {
   return (
     <Provider store={store}>
@@ -18,6 +18,7 @@ function App() {
         <Switch>
         <Route path="/" exact component={Products} />
         <Route path="/WeatherData" component={WeatherData} />
+        <Route path="/AxiosApi" component={AxiosApi} />
           {/* <Route path="/About" component={About} />
           <Route path="/Projects" component={Projects} />
           <Route path="/Contacts" component={Contacts} />

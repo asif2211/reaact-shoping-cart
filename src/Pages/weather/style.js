@@ -11,7 +11,8 @@ align-items:center;
 background: url(images/background.png) no-repeat;
 background-size: 750px 417px;
 width: 100%;
-height: 417px;
+height: 90%;
+padding:1rem;
   
 `;
 export const Weather = styled.div`
@@ -43,21 +44,26 @@ export const Form = styled.div`
    width:25rem;
    
 `
+
 export const Input = styled.input`
   border-width: 0 0 2px;
-  border-color: #c0c0c0;
+  border-color:#14CDFC;
   outline:0;
   padding:.3rem;
-  
+  background-color:transparent;
+  &:focus{
+    border-color:red;
+    box-shadow:none;
+  }
 `
 export const Temp = styled.div`
    display:flex;
    flex-direction:row;
-   
    text-align:center;
    justify-content:space-around;
    width:20rem;
-   position:relative;
-
    
+`
+export const Description = styled.p`
+  text-transform:capitalize;
 `

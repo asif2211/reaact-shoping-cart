@@ -1,5 +1,5 @@
-# React Js Ecommerce Website
-Complete shoping cart that have full of amazong funcitonality. It's developing in react , redux, redux sagas, mongoDb, Node js Styled component.
+**React Js Ecommerce Website**
+Developed ecommerce shoping cart that have all fucntionality like product list, product details, add to cart section, proceeding , checkout section except paypal integration. Plus display weather forcasting through fetching api wiht redux sagas middleware.
 
 **What's Being Used?**
 * [react](https://www.npmjs.com/package/react) :  for managing the presentation logic of application.

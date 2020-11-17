@@ -1,27 +1,21 @@
-# Ecommerce Shoping Cart Project
-    This is a Shoping cart project.
-# styled-component
-    for the implementation of js based styling
-# react
-    for managing the presentation logic of application.
-# react-redux 
-    for generating and managing state model.
-# redux
-    for store based store management
-# redux sagas
-    for redux middleware   
-# Getting Started 
-    in order to get started developing, you'll need to do a few things first.
-    1. Install all of the node_modules required for the package. Depending on the computer's configuration, you may need to prefix this command with a sudo.
-    npm install
-# react-router-dom
-    Routes has the configuration of all the react routes which are being used in app.
-# Animation
-    React-animations implements all animations from animate.css
-# React Reveal
-    This is an animation framework for React
+# React Js Ecommerce Website
+Complete shoping cart that have full of amazong funcitonality. It's developing in react , redux, redux sagas, mongoDb, Node js Styled component.
+# Project Structures.
+* Create component folder.
+* create pages forlder
+* create navbar folder.
+* link to styled components.
+* create header, main and footer
+* style elements
 
-
+**What's Being Used?**
+* [react](https://www.npmjs.com/package/react) :  for managing the presentation logic of application.
+* [styled-component](https://www.npmjs.com/package/styled-components) :  for the implementation of js based styling
+* [react-redux](https://www.npmjs.com/package/react-redux) :  for generating and managing state model.
+* [redux](https://www.npmjs.com/package/redux) :  for store based store management.
+* [redux sagas](https://www.npmjs.com/package/redux-saga) :  for managing redux used as middleware to control async request .
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom) :  for handle routes in web apps.
+* [Animation](https://www.npmjs.com/package/animation) :  for managing css transition.
 
 
 

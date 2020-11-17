@@ -58,7 +58,7 @@ export const ProceedBtn = styled.button`
   padding:.5rem;
   text-align:center;
   margin:.3rem;
-  width:8rem;
+  width:10rem;
   font-size:1rem;
 `
 export const ProceedContainer = styled.div`

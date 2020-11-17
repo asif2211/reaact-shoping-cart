@@ -72,7 +72,7 @@ export default class Cart extends Component {
                     </TotalAmount>
                     
                     <button
-                      style={{ padding: ".5rem", width: "5rem" }}
+                      style={{ padding: ".5rem", width: "10rem" }}
                       onClick={() => this.props.removeCart(item)}
                     >
                       Remove

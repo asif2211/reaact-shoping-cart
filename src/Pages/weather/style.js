@@ -25,7 +25,7 @@ export const ApiData = styled.div`
    flex-direction:row;
    justify-content:space-between;
    align-items:center;
-   width:20rem;
+   width:30rem;
    
    
 `
@@ -34,25 +34,25 @@ export const Icon = styled.div`
    max-height:100vh;
    font-size:4rem;
    justify-content:center;
-   width:20rem;
+   width:30rem;
    position:relative;
 `
 export const Form = styled.div`
    display:flex;
    flex-direction:row;
    justify-content:space-between;
-   width:25rem;
+   width:40rem;
    
 `
 
 export const Input = styled.input`
   border-width: 0 0 2px;
-  border-color:#14CDFC;
+  border-color:#c0c0c0;
   outline:0;
   padding:.3rem;
   background-color:transparent;
   &:focus{
-    border-color:red;
+    border-color: #14cdfc;
     box-shadow:none;
   }
 `
@@ -61,7 +61,7 @@ export const Temp = styled.div`
    flex-direction:row;
    text-align:center;
    justify-content:space-around;
-   width:20rem;
+   width:30rem;
    
 `
 export const Description = styled.p`
